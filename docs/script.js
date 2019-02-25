@@ -1,8 +1,12 @@
 function ch() {
   var form = document.getElementById('form');
   for (x=0;x<9;x+=1) {
-    console.log(form[x].value);
     if (form[x].value>5) {
+      return false;
+    }
+  }
+  for (x=9;x<12;x+=1) {
+    if (form[x].value>100) {
       return false;
     }
   }
