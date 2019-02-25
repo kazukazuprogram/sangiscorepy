@@ -1,14 +1,25 @@
+function errormsg(msg,n) {
+  document.getElementById("err"+n).innerHTML = "<h3 style=\"color:#FF0000;\">"+msg+"</h3>";
+}
+
 function ch() {
   var form = document.getElementById('form');
+  document.getElementById("result").innerHTML = "<div id=\"err1\"></div><br><div id=\"err2\"></div>"
+  var erroc = false;
   for (x=0;x<9;x+=1) {
     if (form[x].value>5) {
-      return false;
+      errormsg("調査書欄に誤記載があります","1");
+      erroc=true;
     }
   }
   for (x=9;x<12;x+=1) {
     if (form[x].value>100) {
-      return false;
+      errormsg("学力検査欄に誤記載があります","2");
+      erroc=true;
     }
+  }
+  if (erroc) {
+    return false;
   }
   var nb = eval(form.japanese.value)+eval(form.math.value)+eval(form.english.value)+(eval(form.ss.value)*1.2)+(eval(form.science.value)*1.4)+((eval(form.music.value)+eval(form.art.value)+eval(form.hotai.value)+eval(form.gika.value))*1.2)
   var na = Math.floor(nb) * 300 / 52
