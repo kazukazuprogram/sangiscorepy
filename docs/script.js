@@ -8,13 +8,13 @@ function ch() {
   var erroc = false;
   for (x=0;x<9;x+=1) {
     if (form[x].value>5) {
-      errormsg("調査書欄に誤記載があります","1");
+      errormsg("調査書欄に入力ミスがあります","1");
       erroc=true;
     }
   }
   for (x=9;x<12;x+=1) {
     if (form[x].value>100) {
-      errormsg("学力検査欄に誤記載があります","2");
+      errormsg("学力検査欄に入力ミスがあります","2");
       erroc=true;
     }
   }
