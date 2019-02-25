@@ -4,21 +4,31 @@ function errormsg(msg,n) {
 
 function ch() {
   var form = document.getElementById('form');
-  document.getElementById("result").innerHTML = "<div id=\"err1\"></div><br><div id=\"err2\"></div>"
-  var erroc = false;
+  var erroca = false;
   for (x=0;x<9;x+=1) {
     if (form[x].value>5) {
       errormsg("調査書欄に入力ミスがあります","1");
-      erroc=true;
+      erroca=true;
     }
   }
+  if (!erroca) {
+    console.log("ErrorMessage 1 Delted.")
+    errormsg("","1");
+  }
+  var errocb = false;
   for (x=9;x<12;x+=1) {
     if (form[x].value>100) {
       errormsg("学力検査欄に入力ミスがあります","2");
-      erroc=true;
+      errocb=true;
     }
   }
-  if (erroc) {
+  if (!errocb) {
+    console.log("ErrorMessage 2 Delted.")
+    errormsg("","2");
+  } else {
+    return false;
+  }
+  if (erroroca) {
     return false;
   }
   var nb = eval(form.japanese.value)+eval(form.math.value)+eval(form.english.value)+(eval(form.ss.value)*1.2)+(eval(form.science.value)*1.4)+((eval(form.music.value)+eval(form.art.value)+eval(form.hotai.value)+eval(form.gika.value))*1.2)
