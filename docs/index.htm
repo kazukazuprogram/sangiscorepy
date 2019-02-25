@@ -4,43 +4,10 @@
     <meta charset="utf-8">
     <title>産技高専 入試用点数換算</title>
     <script type="text/javascript" src="./script.js"></script>
-    <style>
-      .content {
-        display: flex;
-        margin: 0px 10px 10px 0px;
-      }
-      .center {
-        text-align: center;
-      }
-      li {
-        display: inline-block;
-      }
-      input[type="number"] {
-        width: 3em;
-      }
-      div.border {
-        border: dashed 2px #888888;
-        margin: 10px 0px 0px 10px;
-      }
-      .left {
-        width: 36%;
-        float: left;
-      }
-      .right {
-        width: 64%;
-        float: right;
-      }
-      .submit {
-        margin: 0px 10px 0px 10px;
-      }
-      input[type="submit"] {
-        width: 100%;
-        height: 100px;
-      }
-    </style>
+    <link rel="stylesheet" href="./style.css">
   </head>
   <body onload="onload();">
-    <h3 class="title center">産技高専 点数換算 （入試用）</h3>
+    <h1 class="title center">産技高専 点数換算 （入試用）</h3>
     <form id="form">
       <div class="content center">
         <div class="left">
@@ -49,41 +16,41 @@
             <ul class="jyoudan">
               <li>
                 <label for="japanese">国</label>
-                <input type="number" name="japanese" value="0" min="0" max="100" autofocus>
+                <input type="number" name="japanese" value="3" min="1" max="5" autofocus>
               </li>
               <li>
                 <label for="ss">社</label>
-                <input type="number" name="ss" value="0" min="0" max="100">
+                <input type="number" name="ss" value="3" min="1" max="5">
               </li>
               <li>
                 <label for="math">数</label>
-                <input type="number" name="math" value="0" min="0" max="100">
+                <input type="number" name="math" value="3" min="1" max="5">
               </li>
               <li>
                 <label for="science">理</label>
-                <input type="number" name="science" value="0" min="0" max="100">
+                <input type="number" name="science" value="3" min="1" max="5">
               </li>
               <li>
                 <label for="english">英</label>
-                <input type="number" name="english" value="0" min="0" max="100">
+                <input type="number" name="english" value="3" min="1" max="5">
               </li>
             </ul>
             <ul class="gedan">
               <li>
                 <label for="music">音</label>
-                <input type="number" name="music" value="0" min="0" max="100">
+                <input type="number" name="music" value="3" min="1" max="5">
               </li>
               <li>
                 <label for="art">美</label>
-                <input type="number" name="art" value="0" min="0" max="100">
+                <input type="number" name="art" value="3" min="1" max="5">
               </li>
               <li>
                 <label for="hotai">体</label>
-                <input type="number" name="hotai" value="0" min="0" max="100">
+                <input type="number" name="hotai" value="3" min="1" max="5">
               </li>
               <li>
                 <label for="gika">技</label>
-                <input type="number" name="gika" value="0" min="0" max="100">
+                <input type="number" name="gika" value="3" min="1" max="5">
               </li>
             </ul>
           </div>
@@ -106,8 +73,16 @@
           </div>
         </div>
         <div class="right border">
-          <div class="result">
-            <h2>ここに結果が表示されます</h2>
+          <label class="title">計算結果</label>
+          <div class="result" id="result">
+            <div class="description border">
+              <p>使用方法</p>
+              <ol>
+                <li>右のテキストボックスに点数を書きます</li>
+                <li>下の「計算」ボタンを押します</li>
+                <li>ここに結果が表示されます</li>
+              </ol>
+            </div>
           </div>
         </div>
       </div>
