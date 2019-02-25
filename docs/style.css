@@ -9,17 +9,48 @@
   text-align: center;
 }
 
-ul li {
+div:not(.footer) ul li {
   display: inline-block;
+}
+
+input {
+  border:1px solid #777;
+  padding: 3px;
+  background: #fff;
+  border-radius: 5px;
+  /* ここからjQuery */
+  /* Webkit */
+  background: -webkit-gradient(linear, left top, left bottom, from(#ddd), to(#fff));
+  -webkit-border-radius: 5px;
+  -webkit-box-shadow: 1px 1px 1px #fff;
+  /* Firefox */
+  background: -moz-linear-gradient(
+    top,
+    #ddd,
+    #fff
+    );
+    -moz-border-radius: 5px;
+    -moz-box-shadow: 1px 1px 1px #fff;
 }
 
 input[type="number"] {
   width: 3em;
+  font-size: 20px;
+  text-align: center;
+}
+
+div.naishin ul li input[type="number"] {
+  width: 2em;
+}
+
+label {
+  padding-left: 5px;
 }
 
 div.border {
   border: dashed 2px #888888;
   margin: 10px 0px 0px 10px;
+  border-radius: 15px;
 }
 
 div.description {
@@ -41,12 +72,13 @@ div.result div {
 }
 
 .left {
-  width: 36%;
+  width: 45%;
   float: left;
 }
 
 .right {
-  width: 64%;
+  width: 55%;
+  padding-right: 0;
   float: right;
 }
 
@@ -58,4 +90,19 @@ input[type="submit"] {
   width: 100%;
   height: 100px;
   font-size: 3em;
+}
+
+div.footer ul {
+  display: block;
+  list-style-type: disc;
+  color: #888888;
+  font-size: 12px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+/* ここからjQuery */
+body {
+  background: #DDDDDD;
 }

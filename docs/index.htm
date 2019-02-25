@@ -15,42 +15,42 @@
             <label class="title">調査書</label>
             <ul class="jyoudan">
               <li>
-                <label for="japanese">国</label>
-                <input type="number" name="japanese" value="3" min="1" max="5" autofocus>
+                <label for="japanese">国</label><br>
+                <input type="number" maxlength= onblur="ch();" onchange="ch();" name="japanese" value="3" min="1" max="5" autofocus>
               </li>
               <li>
-                <label for="ss">社</label>
-                <input type="number" name="ss" value="3" min="1" max="5">
+                <label for="ss">社</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="ss" value="3" min="1" max="5">
               </li>
               <li>
-                <label for="math">数</label>
-                <input type="number" name="math" value="3" min="1" max="5">
+                <label for="math">数</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="math" value="3" min="1" max="5">
               </li>
               <li>
-                <label for="science">理</label>
-                <input type="number" name="science" value="3" min="1" max="5">
+                <label for="science">理</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="science" value="3" min="1" max="5">
               </li>
               <li>
-                <label for="english">英</label>
-                <input type="number" name="english" value="3" min="1" max="5">
+                <label for="english">英</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="english" value="3" min="1" max="5">
               </li>
             </ul>
             <ul class="gedan">
               <li>
-                <label for="music">音</label>
-                <input type="number" name="music" value="3" min="1" max="5">
+                <label for="music">音</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="music" value="3" min="1" max="5">
               </li>
               <li>
-                <label for="art">美</label>
-                <input type="number" name="art" value="3" min="1" max="5">
+                <label for="art">美</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="art" value="3" min="1" max="5">
               </li>
               <li>
-                <label for="hotai">体</label>
-                <input type="number" name="hotai" value="3" min="1" max="5">
+                <label for="hotai">体</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="hotai" value="3" min="1" max="5">
               </li>
               <li>
-                <label for="gika">技</label>
-                <input type="number" name="gika" value="3" min="1" max="5">
+                <label for="gika">技</label><br>
+                <input type="number" onblur="ch();" onchange="ch();" name="gika" value="3" min="1" max="5">
               </li>
             </ul>
           </div>
@@ -59,15 +59,15 @@
             <ul>
               <li>
                 <label for="exam_japanese">国</label>
-                <input type="number" name="exam_japanese" value="0" min="0" max="100">
+                <input type="number" onblur="ch();" onchange="ch();" name="exam_japanese" value="0" min="0" max="100">
               </li>
               <li>
                 <label for="exam_math">数</label>
-                <input type="number" name="exam_math" value="0" min="0" max="100">
+                <input type="number" onblur="ch();" onchange="ch();" name="exam_math" value="0" min="0" max="100">
               </li>
               <li>
                 <label for="exam_english">英</label>
-                <input type="number" name="exam_english" value="0" min="0" max="100">
+                <input type="number" onblur="ch();" onchange="ch();" name="exam_english" value="0" min="0" max="100">
               </li>
             </ul>
           </div>
@@ -78,7 +78,7 @@
             <div class="description border">
               <p>使用方法</p>
               <ol>
-                <li>右のテキストボックスに点数を書きます</li>
+                <li>左のテキストボックスに点数を書きます</li>
                 <li>下の「計算」ボタンを押します</li>
                 <li>ここに結果が表示されます</li>
               </ol>
@@ -86,9 +86,15 @@
           </div>
         </div>
       </div>
-      <div class="submit">
+      <!-- <div class="submit">
         <input type="submit" value="計算">
-      </div>
+      </div> -->
     </form>
+    <div class="footer">
+      <ul>
+        <li>このプログラムは2019年2月時点の情報をもとに個人が試験的に作成したものです。正確性などを保証するものではありません。</li>
+        <li>このプログラムの使用により生じたトラブル・損失・損害などについて、一切の責任を負いかねますのであらかじめご了承ください。</li>
+      </ul>
+    </div>
   </body>
 </html>
