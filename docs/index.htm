@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>産技高専 入試用点数換算</title>
+    <script type="text/javascript" src="./script.js"></script>
+    <style>
+      .content {
+        display: flex;
+      }
+      .center {
+        text-align: center;
+      }
+      li {
+        display: inline-block;
+      }
+      input[type="number"] {
+        width: 2rem;
+      }
+      div.border {
+        border: dashed 2px #888888;
+        margin: 10px;
+      }
+      .left {
+        width: 36%;
+        float: left;
+      }
+      .right {
+        width: 64%;
+        float: right;
+      }
+      .result {
+      }
+      input[type="submit"] {
+        width: 100%;
+        height: 100px;
+      }
+    </style>
+  </head>
+  <body onload="onload();">
+    <h3 class="title center">産技高専 点数換算 （入試用）</h3>
+    <form id="form">
+      <div class="content center">
+        <div class="left">
+          <div class="naishin border">
+            <label class="title">調査書</label>
+            <ul class="jyoudan">
+              <li>
+                <label for="japanese">国語</label>
+                <input type="number" name="japanese" value="0" min="0" max="100" autofocus>
+              </li>
+              <li>
+                <label for="ss">社会</label>
+                <input type="number" name="ss" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="math">数学</label>
+                <input type="number" name="math" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="science">理科</label>
+                <input type="number" name="science" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="english">英語</label>
+                <input type="number" name="english" value="0" min="0" max="100">
+              </li>
+            </ul>
+            <ul class="gedan">
+              <li>
+                <label for="music">音楽</label>
+                <input type="number" name="music" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="art">美術</label>
+                <input type="number" name="art" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="hotai">保健体育</label>
+                <input type="number" name="hotai" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="gika">技術家庭</label>
+                <input type="number" name="gika" value="0" min="0" max="100">
+              </li>
+            </ul>
+          </div>
+          <div class="exam border">
+            <label class="title">試験結果</label>
+            <ul>
+              <li>
+                <label for="exam-japanese">国語</label>
+                <input type="number" name="exam-japanese" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="exam-math">数学</label>
+                <input type="number" name="exam-math" value="0" min="0" max="100">
+              </li>
+              <li>
+                <label for="exam-english">英語</label>
+                <input type="number" name="exam-english" value="0" min="0" max="100">
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="right">
+          <div class="result border">
+            <h2>ここに結果が表示されます</h2>
+          </div>
+        </div>
+      </div>
+      <div class="submit">
+        <input type="submit" value="計算">
+      </div>
+    </form>
+  </body>
+</html>
