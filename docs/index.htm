@@ -57,10 +57,7 @@
                 <input type="number" name="gika" value="" min="1" max="5" tabindex="9">
               </li>
             </ul>
-            <err id="err1"></err>
-            <div>
-              換算内申&nbsp;&nbsp;{3}/52点&nbsp;&nbsp;{0}/300点
-            </div>
+            <div id="naishin_result"></div>
           </div>
           <div class="exam border" id="exam">
             <label class="title">学力検査</label>
@@ -78,10 +75,7 @@
                 <input type="number" name="exam_english" value="" min="0" max="100">
               </li>
             </ul>
-            <err id="err2"></err>
-            <div>
-              学力検査&nbsp;&nbsp;{1}/700点
-            </div>
+            <div id=exam_result></div>
           </div>
         <!-- </div> -->
         <div class="right border">
@@ -103,7 +97,7 @@
       </div>
     </form>
     <!-- <p>横表示は<a href="./pc.htm">こちら</a></p> -->
-    <div class="footer" unselectable="on">
+    <div class="footer" unselectable="on" id="footer">
       <ul>
         <li>お使いのブラウザにより正しく動作しないことがあります。</li>
         <li>このプログラムは2019年2月時点の情報をもとに個人が試験的に作成したものです。正確性などを保証するものではありません。</li>
