@@ -12,7 +12,6 @@ function ch() {
     }
   }
   if (!erroca) {
-    console.log("ErrorMessage 1 Delted.")
     errormsg("","1");
   }
   var errocb = false;
@@ -23,32 +22,73 @@ function ch() {
     }
   }
   if (!errocb) {
-    console.log("ErrorMessage 2 Delted.")
     errormsg("","2");
   } else {
     return false;
   }
-  if (erroroca) {
+  if (erroca) {
     return false;
   }
-  var nb = eval(form.japanese.value)+eval(form.math.value)+eval(form.english.value)+(eval(form.ss.value)*1.2)+(eval(form.science.value)*1.4)+((eval(form.music.value)+eval(form.art.value)+eval(form.hotai.value)+eval(form.gika.value))*1.2)
-  var na = Math.floor(nb) * 300 / 52
+  var nb=0;
+  for (var x=0;x<9;x+=1){
+    if (form[x].value=="") {
+      nb += 0;
+      console.log("空欄:",x, form[x].value);
+    } else if (x==3) {
+      nb += eval(form[x].value)*1.2;
+    } else if (x==4) {
+      nb += eval(form[x].value)*1.4;
+    } else if (x>5) {
+      nb += eval(form[x].value)*1.2;
+    } else {
+      nb += eval(form[x].value);
+    }
+  }
+  var naa = Math.floor(nb);
+  var na = naa * 300 / 52;
   var naishin = Math.floor(na);
-  var exam = Math.floor((eval(form.exam_japanese.value)+(eval(form.exam_math.value)*1.5)+eval(form.exam_english.value)))*2;
-  console.log(nb, na, naishin);
+  var exam = 0;
+  for (x=9;x<12;x+=1) {
+    if (form[x].value=="") {
+      exam += 0;
+      // console.log("空欄",x, form[x].value);
+    } else {
+      exam += eval(form[x].value)*1.2;
+    }
+  }
+  exam = Math.floor(exam)*2;
+  // console.log(nb, na, naishin);
   var score = naishin + exam;
-  var writestr = "<div><h3>調査書</h3><font size=\"8\">{0}</font>/300点</div><div><h3>試験点</h3><font size=\"8\">{1}</font>/700点</div><div><h3>合計点</h3><font size=\"8\">{2}</font>/1000点</div>".replace("{0}",naishin).replace("{1}",exam).replace("{2}",score);
+  document.getElementById("naishin").innerHTML = document.getElementById("naishin").innerHTML.replace("{0}",naishin).replace("{3}",naa);
+  document.getElementById("exam").innerHTML = document.getElementById("exam").innerHTML.replace("{1}",exam);
+  var writestr = "<div><h3>調査書</h3><font size=\"8\">{0}</font>/300点</div><div><h3>学力検査</h3><font size=\"8\">{1}</font>/700点</div><div><h3>合計</h3><font size=\"8\">{2}</font>/1000点</div>".replace("{0}",naishin).replace("{1}",exam).replace("{2}",score).replace("{3}",naa);
   document.getElementById("result").innerHTML = writestr;
 
   return false;
 }
 
 function onload() {
+  document.getElementById("jsdisablealert").innerHTML="";
+  // document.cookie="Client";
+  if (document.cookie!="Client") {
+    // document.getElementById("csslink").setAttribute("href","pc.css")
+  }
   if (window.performance) {
     if (performance.navigation.type === 1) {
       console.log("リロードされた");
     } else {
       console.log("リロードされていない");
+    }
+  }
+  ch();
+  var form = document.getElementById('form');
+  var ua = navigator.userAgent;
+  if (ua.indexOf('iPhone') > 0 || ua.indexOf('Android') > 0) {
+  } else {
+    for (x=0;x<9;x+=1) {
+      if (form[x].value>5) {
+        form[x].value="3";
+      }
     }
   }
   document.getElementById('form').onsubmit = ch;

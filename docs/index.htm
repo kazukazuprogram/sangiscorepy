@@ -4,76 +4,86 @@
     <meta charset="utf-8">
     <title>産技高専 学力入試用点数換算</title>
     <script type="text/javascript" src="./script.js"></script>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="./mobile.css" id="csslink">
   </head>
   <body onload="onload();">
-    <h1 class="title center">産技高専 学力入試用点数換算</h3>
+    <h1 class="title center">産技高専 学力入試用点数換算</h1>
+    <div id="jsdisablealert" class="center">
+      <br>
+      <h3 class="center" style="color:#FF0000;">JavaScriptの設定が無効になっています。お使いのブラウザでJavaScriptを有効にしてご使用ください。</h3>
+    </div>
     <form id="form">
       <div class="content center">
-        <div class="left">
-          <div class="naishin border">
+        <!-- <div class="left"> -->
+          <div class="naishin border" id="naishin">
             <label class="title">調査書</label>
             <ul class="jyoudan">
               <li>
                 <label for="japanese">国</label><br>
-                <input type="number" maxlength= onblur="ch();" onchange="ch();" name="japanese" value="3" min="1" max="5" autofocus>
+                <input type="number" name="japanese" value="" min="1" max="5" tabindex="1">
               </li>
               <li>
                 <label for="ss">社</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="ss" value="3" min="1" max="5">
+                <input type="number" name="ss" value="" min="1" max="5" tabindex="2">
               </li>
               <li>
                 <label for="math">数</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="math" value="3" min="1" max="5">
+                <input type="number" name="math" value="" min="1" max="5" tabindex="3">
               </li>
               <li>
                 <label for="science">理</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="science" value="3" min="1" max="5">
+                <input type="number" name="science" value="" min="1" max="5" tabindex="4">
               </li>
               <li>
                 <label for="english">英</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="english" value="3" min="1" max="5">
+                <input type="number" name="english" value="" min="1" max="5" tabindex="5">
               </li>
             </ul>
             <ul class="gedan">
               <li>
                 <label for="music">音</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="music" value="3" min="1" max="5">
+                <input type="number" name="music" value="" min="1" max="5" tabindex="6">
               </li>
               <li>
                 <label for="art">美</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="art" value="3" min="1" max="5">
+                <input type="number" name="art" value="" min="1" max="5" tabindex="7">
               </li>
               <li>
                 <label for="hotai">体</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="hotai" value="3" min="1" max="5">
+                <input type="number" name="hotai" value="" min="1" max="8" tabindex="8">
               </li>
               <li>
                 <label for="gika">技</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="gika" value="3" min="1" max="5">
+                <input type="number" name="gika" value="" min="1" max="5" tabindex="9">
               </li>
             </ul>
             <err id="err1"></err>
+            <div>
+              換算内申&nbsp;&nbsp;{3}/52点&nbsp;&nbsp;{0}/300点
+            </div>
           </div>
-          <div class="exam border">
+          <div class="exam border" id="exam">
             <label class="title">学力検査</label>
             <ul>
               <li>
                 <label for="exam_japanese">国</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="exam_japanese" value="0" min="0" max="100">
+                <input type="number" name="exam_japanese" value="" min="0" max="100">
               </li>
               <li>
                 <label for="exam_math">数</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="exam_math" value="0" min="0" max="100">
+                <input type="number" name="exam_math" value="" min="0" max="100">
               </li>
               <li>
                 <label for="exam_english">英</label><br>
-                <input type="number" onblur="ch();" onchange="ch();" name="exam_english" value="0" min="0" max="100">
+                <input type="number" name="exam_english" value="" min="0" max="100">
               </li>
             </ul>
             <err id="err2"></err>
+            <div>
+              学力検査&nbsp;&nbsp;{1}/700点
+            </div>
           </div>
-        </div>
+        <!-- </div> -->
         <div class="right border">
           <label class="title">計算結果</label>
           <div class="result" id="result">
@@ -88,12 +98,14 @@
           </div>
         </div>
       </div>
-      <!-- <div class="submit">
+      <div class="submit center">
         <input type="submit" value="計算">
-      </div> -->
+      </div>
     </form>
+    <!-- <p>横表示は<a href="./pc.htm">こちら</a></p> -->
     <div class="footer" unselectable="on">
       <ul>
+        <li>お使いのブラウザにより正しく動作しないことがあります。</li>
         <li>このプログラムは2019年2月時点の情報をもとに個人が試験的に作成したものです。正確性などを保証するものではありません。</li>
         <li>このプログラムの使用により生じたトラブル・損失・損害などについて、一切の責任を負いかねますのであらかじめご了承ください。</li>
       </ul>
