@@ -14,94 +14,94 @@
     </div>
     <form id="form">
       <div class="content center">
-        <!-- <div class="left"> -->
-          <div class="naishin border" id="naishin">
-            <label class="title">調査書</label>
-            <table class="center">  <!-- 調査書 上段 -->
-                <tr>    <!-- 調査書 教科名 国社数理英 -->
-                    <th>国</th>
-                    <th>社</th>
-                    <th>数</th>
-                    <th>理</th>
-                    <th>英</th>
-                </tr>
 
-                <tr>    <!-- 調査書 入力欄 国社数理英 -->
-                    <td>
-                      <input type="number" name="japanese" min="1" max="5" tabindex="1">
-                    </td>
+        <div class="naishin border" id="naishin">
+          <label class="title">調査書</label>
+          <table class="center">  <!-- 調査書 上段 -->
+              <tr>    <!-- 調査書 教科名 国社数理英 -->
+                  <th>国</th>
+                  <th>社</th>
+                  <th>数</th>
+                  <th>理</th>
+                  <th>英</th>
+              </tr>
 
-                    <td>
-                      <input type="number" name="ss" min="1" max="5" tabindex="2">
-                    </td>
+              <tr>    <!-- 調査書 入力欄 国社数理英 -->
+                  <td>
+                    <input type="number" name="japanese" min="1" max="5" tabindex="1">
+                  </td>
 
-                    <td>
-                      <input type="number" name="math" min="1" max="5" tabindex="3">
-                    </td>
+                  <td>
+                    <input type="number" name="ss" min="1" max="5" tabindex="2">
+                  </td>
 
-                    <td>
-                      <input type="number" name="science" min="1" max="5" tabindex="4">
-                    </td>
+                  <td>
+                    <input type="number" name="math" min="1" max="5" tabindex="3">
+                  </td>
 
-                    <td>
-                      <input type="number" name="english" min="1" max="5" tabindex="5">
-                    </td>
-                </tr>
-            </table>
-            <table class="center">    <!-- 調査書 下段 -->
-                <tr>    <!-- 調査書 教科名 音美体技 -->
-                    <th>音</th>
-                    <th>美</th>
-                    <th>体</th>
-                    <th>技</th>
-                </tr>
+                  <td>
+                    <input type="number" name="science" min="1" max="5" tabindex="4">
+                  </td>
 
-                <tr>    <!-- 調査書 入力欄 音美体技 -->
-                    <td>
-                      <input type="number" name="music" min="1" max="5" tabindex="6">
-                    </td>
+                  <td>
+                    <input type="number" name="english" min="1" max="5" tabindex="5">
+                  </td>
+              </tr>
+          </table>
+          <table class="center">    <!-- 調査書 下段 -->
+              <tr>    <!-- 調査書 教科名 音美体技 -->
+                  <th>音</th>
+                  <th>美</th>
+                  <th>体</th>
+                  <th>技</th>
+              </tr>
 
-                    <td>
-                      <input type="number" name="art" min="1" max="5" tabindex="7">
-                    </td>
+              <tr>    <!-- 調査書 入力欄 音美体技 -->
+                  <td>
+                    <input type="number" name="music" min="1" max="5" tabindex="6">
+                  </td>
 
-                    <td>
-                      <input type="number" name="hotai" min="1" max="5" tabindex="8">
-                    </td>
+                  <td>
+                    <input type="number" name="art" min="1" max="5" tabindex="7">
+                  </td>
 
-                    <td>
-                      <input type="number" name="gika" min="1" max="5" tabindex="9">
-                    </td>
-                </tr>
-            </table>
-            <div id="naishin_result"></div>
-          </div>
-          <div class="exam border" id="exam">
-            <label class="title">学力検査</label>
-            <table class="center">    <!-- 学力検査 -->
-                <tr>
-                    <th>国</th>
-                    <th>数</th>
-                    <th>英</th>
-                </tr>
+                  <td>
+                    <input type="number" name="hotai" min="1" max="5" tabindex="8">
+                  </td>
 
-                <tr>    <!-- 調査書 入力欄 音美体技 -->
-                    <td>
-                      <input type="number" name="exam_japanese" min="0" max="100" tabindex="10">
-                    </td>
+                  <td>
+                    <input type="number" name="gika" min="1" max="5" tabindex="9">
+                  </td>
+              </tr>
+          </table>
+          <div id="naishin_result"></div>
+        </div>
+        <div class="exam border" id="exam">
+          <label class="title">学力検査</label>
+          <table class="center">
+              <tr>
+                  <th>国</th>
+                  <th>数</th>
+                  <th>英</th>
+              </tr>
 
-                    <td>
-                      <input type="number" name="exam_math" min="0" max="100" tabindex="11">
-                    </td>
+              <tr>
+                  <td>
+                    <input type="number" name="exam_japanese" min="0" max="100" tabindex="10">
+                  </td>
 
-                    <td>
-                      <input type="number" name="exam_english" min="0" max="100" tabindex="12">
-                    </td>
-                </tr>
-            </table>
-            <div id=exam_result></div>
-          </div>
-        <!-- </div> -->
+                  <td>
+                    <input type="number" name="exam_math" min="0" max="100" tabindex="11">
+                  </td>
+
+                  <td>
+                    <input type="number" name="exam_english" min="0" max="100" tabindex="12">
+                  </td>
+              </tr>
+          </table>
+          <div id=exam_result></div>
+        </div>
+
         <div class="right border">
           <label class="title">計算結果</label>
           <div class="result" id="result">
