@@ -103,3 +103,13 @@ div.footer ul {
 body {
   background: #DDDDDD;
 }
+
+/* css for table */
+table.center {
+    margin-left: auto;
+    margin-right: auto;
+}
+th {
+    color: white;
+    background-color: #444444;
+}

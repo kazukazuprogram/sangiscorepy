@@ -17,46 +17,63 @@
         <!-- <div class="left"> -->
           <div class="naishin border" id="naishin">
             <label class="title">調査書</label>
-            <ul class="jyoudan">
-              <li>
-                <label for="japanese">国</label><br>
-                <input type="number" name="japanese" value="" min="1" max="5" tabindex="1">
-              </li>
-              <li>
-                <label for="ss">社</label><br>
-                <input type="number" name="ss" value="" min="1" max="5" tabindex="2">
-              </li>
-              <li>
-                <label for="math">数</label><br>
-                <input type="number" name="math" value="" min="1" max="5" tabindex="3">
-              </li>
-              <li>
-                <label for="science">理</label><br>
-                <input type="number" name="science" value="" min="1" max="5" tabindex="4">
-              </li>
-              <li>
-                <label for="english">英</label><br>
-                <input type="number" name="english" value="" min="1" max="5" tabindex="5">
-              </li>
-            </ul>
-            <ul class="gedan">
-              <li>
-                <label for="music">音</label><br>
-                <input type="number" name="music" value="" min="1" max="5" tabindex="6">
-              </li>
-              <li>
-                <label for="art">美</label><br>
-                <input type="number" name="art" value="" min="1" max="5" tabindex="7">
-              </li>
-              <li>
-                <label for="hotai">体</label><br>
-                <input type="number" name="hotai" value="" min="1" max="5" tabindex="8">
-              </li>
-              <li>
-                <label for="gika">技</label><br>
-                <input type="number" name="gika" value="" min="1" max="5" tabindex="9">
-              </li>
-            </ul>
+            <table class="center">  <!-- 調査書 上段 -->
+                <tr>    <!-- 調査書 教科名 国社数理英 -->
+                    <th>国</th>
+                    <th>社</th>
+                    <th>数</th>
+                    <th>理</th>
+                    <th>英</th>
+                </tr>
+
+                <tr>    <!-- 調査書 入力欄 国社数理英 -->
+                    <td>
+                      <input type="number" name="japanese" min="1" max="5" tabindex="1">
+                    </td>
+
+                    <td>
+                      <input type="number" name="ss" min="1" max="5" tabindex="2">
+                    </td>
+
+                    <td>
+                      <input type="number" name="math" min="1" max="5" tabindex="3">
+                    </td>
+
+                    <td>
+                      <input type="number" name="science" min="1" max="5" tabindex="4">
+                    </td>
+
+                    <td>
+                      <input type="number" name="english" min="1" max="5" tabindex="5">
+                    </td>
+                </tr>
+            </table>
+            <table class="center">    <!-- 調査書 下段 -->
+                <tr>    <!-- 調査書 教科名 音美体技 -->
+                    <th>音</th>
+                    <th>美</th>
+                    <th>体</th>
+                    <th>技</th>
+                </tr>
+
+                <tr>    <!-- 調査書 入力欄 音美体技 -->
+                    <td>
+                      <input type="number" name="music" min="1" max="5" tabindex="6">
+                    </td>
+
+                    <td>
+                      <input type="number" name="art" min="1" max="5" tabindex="7">
+                    </td>
+
+                    <td>
+                      <input type="number" name="hotai" min="1" max="5" tabindex="8">
+                    </td>
+
+                    <td>
+                      <input type="number" name="gika" min="1" max="5" tabindex="9">
+                    </td>
+                </tr>
+            </table>
             <div id="naishin_result"></div>
           </div>
           <div class="exam border" id="exam">
