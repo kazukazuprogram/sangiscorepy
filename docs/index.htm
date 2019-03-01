@@ -78,20 +78,27 @@
           </div>
           <div class="exam border" id="exam">
             <label class="title">学力検査</label>
-            <ul>
-              <li>
-                <label for="exam_japanese">国</label><br>
-                <input type="number" name="exam_japanese" value="" min="0" max="100">
-              </li>
-              <li>
-                <label for="exam_math">数</label><br>
-                <input type="number" name="exam_math" value="" min="0" max="100">
-              </li>
-              <li>
-                <label for="exam_english">英</label><br>
-                <input type="number" name="exam_english" value="" min="0" max="100">
-              </li>
-            </ul>
+            <table class="center">    <!-- 学力検査 -->
+                <tr>
+                    <th>国</th>
+                    <th>数</th>
+                    <th>英</th>
+                </tr>
+
+                <tr>    <!-- 調査書 入力欄 音美体技 -->
+                    <td>
+                      <input type="number" name="exam_japanese" min="0" max="100" tabindex="10">
+                    </td>
+
+                    <td>
+                      <input type="number" name="exam_math" min="0" max="100" tabindex="11">
+                    </td>
+
+                    <td>
+                      <input type="number" name="exam_english" min="0" max="100" tabindex="12">
+                    </td>
+                </tr>
+            </table>
             <div id=exam_result></div>
           </div>
         <!-- </div> -->
