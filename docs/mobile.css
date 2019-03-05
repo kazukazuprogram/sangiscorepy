@@ -34,7 +34,7 @@ input {
 
 input[type="number"] {
   width: 3em;
-  font-size: 20px;
+  font-size: 28px;
   text-align: center;
 }
 
@@ -59,12 +59,10 @@ div.description {
 
 div.result {
   display: flex;
-  /* text-align: center; */
 }
 
 div.result div {
   margin: 0px auto;
-  margin-bottom: 0px;
 }
 
 .submit {

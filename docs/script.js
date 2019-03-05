@@ -35,9 +35,9 @@ function ch() {
   }
   exam = Math.floor(exam)*2;
   var score = naishin + exam;
-  document.getElementById("naishin_result").innerHTML = "換算内申&nbsp;&nbsp;{3}/52点&nbsp;&nbsp;{0}/300点".replace("{0}",naishin).replace("{3}",naa);
-  document.getElementById("exam_result").innerHTML = "学力検査&nbsp;&nbsp;{1}/700点".replace("{1}",exam);
-  var writestr = "<div><h3>調査書</h3><font size=\"8\">{0}</font>/300点</div><div><h3>学力検査</h3><font size=\"8\">{1}</font>/700点</div><div><h3>合計</h3><font size=\"8\">{2}</font>/1000点</div>".replace("{0}",naishin).replace("{1}",exam).replace("{2}",score).replace("{3}",naa);
+  document.getElementById("naishin_result").innerHTML = "換算内申&nbsp;&nbsp;{3}/52点&nbsp;&nbsp;&nbsp;&nbsp;調査書点&nbsp;&nbsp;{0}/300点".replace("{0}",naishin).replace("{3}",naa);
+  document.getElementById("exam_result").innerHTML = "学力検査点&nbsp;&nbsp;{1}/700点".replace("{1}",exam);
+  var writestr = "<div><h3>調査書点</h3><font size=\"8\">{0}</font>/300点</div><div><h3>学力検査点</h3><font size=\"8\">{1}</font>/700点</div><div><h3>合計</h3><font size=\"8\">{2}</font>/1000点</div>".replace("{0}",naishin).replace("{1}",exam).replace("{2}",score).replace("{3}",naa);
   document.getElementById("result").innerHTML = writestr;
 
   return false;
