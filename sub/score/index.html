@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ja" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="description" content="産技高専の学力入試用点数換算プログラム">
+    <title>産技高専 学力入試用点数換算</title>
+    <script type="text/javascript" src="./script.js"></script>
+    <link rel="stylesheet" href="./mobile.css" id="csslink">
+  </head>
+  <body onload="onload();">
+    <h1 class="title center">産技高専 学力入試用点数換算</h1>
+    <p class="note1">このプログラムは都立産業技術高等専門学校（産技高専）の学力入試用です。<br>都立高校の計算方法とは異なります。</p>
+    <div id="jsdisablealert" class="center">
+      <br>
+      <h3 class="center" style="color:#FF0000;">JavaScriptの設定が無効になっています。お使いのブラウザでJavaScriptを有効にしてご使用ください。</h3>
+    </div>
+    <form id="form">
+      <div class="content center">
+
+        <div class="naishin border" id="naishin">
+          <label class="title">調査書</label>
+          <table class="center">  <!-- 調査書 上段 -->
+              <tr>    <!-- 調査書 教科名 国社数理英 -->
+                  <th>国</th>
+                  <th>社</th>
+                  <th>数</th>
+                  <th>理</th>
+                  <th>英</th>
+              </tr>
+
+              <tr>    <!-- 調査書 入力欄 国社数理英 -->
+                  <td>
+                    <input type="number" pattern="\d*" name="japanese" min="1" max="5" tabindex="1">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="ss" min="1" max="5" tabindex="2">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="math" min="1" max="5" tabindex="3">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="science" min="1" max="5" tabindex="4">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="english" min="1" max="5" tabindex="5">
+                  </td>
+              </tr>
+          </table>
+          <table class="center">    <!-- 調査書 下段 -->
+              <tr>    <!-- 調査書 教科名 音美体技 -->
+                  <th>音</th>
+                  <th>美</th>
+                  <th>体</th>
+                  <th>技</th>
+              </tr>
+
+              <tr>    <!-- 調査書 入力欄 音美体技 -->
+                  <td>
+                    <input type="number" pattern="\d*" name="music" min="1" max="5" tabindex="6">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="art" min="1" max="5" tabindex="7">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="hotai" min="1" max="5" tabindex="8">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="gika" min="1" max="5" tabindex="9">
+                  </td>
+              </tr>
+          </table>
+          <div id="naishin_result"></div>
+        </div>
+        <div class="exam border" id="exam">
+          <label class="title">学力検査</label>
+          <table class="center">
+              <tr>
+                  <th>国</th>
+                  <th>数</th>
+                  <th>英</th>
+              </tr>
+
+              <tr>
+                  <td>
+                    <input type="number" pattern="\d*" name="exam_japanese" min="0" max="100" tabindex="10">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="exam_math" min="0" max="100" tabindex="11">
+                  </td>
+
+                  <td>
+                    <input type="number" pattern="\d*" name="exam_english" min="0" max="100" tabindex="12">
+                  </td>
+              </tr>
+          </table>
+          <div id="exam_result"></div>
+        </div>
+
+        <div class="right border">
+          <label class="title">計算結果</label>
+<table class="center">
+<tr>
+<td>
+          <div class="result" id="result">
+          </div>
+</td>
+</tr>
+</table>
+        </div>
+      </div>
+      <div class="submit center">
+        <input type="submit" value="計算">
+      </div>
+    </form>
+
+    <div class="footer" unselectable="on" id="footer">
+      <ul>
+        <li>お使いのブラウザにより正しく動作しないことがあります。</li>
+        <li>このプログラムは2019年2月時点の情報をもとに個人が試験的に作成したものです。正確性などを保証するものではありません。</li>
+        <li>このプログラムの使用により生じたトラブル・損失・損害などについて、一切の責任を負いかねますのであらかじめご了承ください。</li>
+      </ul>
+    </div>
+  </body>
+</html>
